@@ -45,7 +45,7 @@
     <script>
         
         function getUser(url1, url2, callback) {
-            const covidData = {"Thailand": {},"World": {}
+            let covidData = {"Thailand": {},"World": {}
         }
             axios.get(`${url1}`).then(function (response) {
                 let res = response.data
@@ -73,8 +73,6 @@
             setTimeout(() => {
                 callback(covidData)
             }, 800);
-            
-
         }
         function show(covidData) {
             document.getElementById("jar").innerHTML += `<tr><td>Thailand</td>
