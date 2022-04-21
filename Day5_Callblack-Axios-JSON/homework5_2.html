@@ -58,14 +58,14 @@
             })
             axios.get(`${url2}`).then(function (response) {
                 let res = response.covidData
-                    covidData.World.cases           = res.cases
-                    covidData.World.todayCases      = res.todayCases
-                    covidData.World.deaths          = res.deaths
-                    covidData.World.todayDeaths     = res.todayDeaths
-                    covidData.World.recovered       = res.recovered
-                    covidData.World.todayRecovered  = res.todayRecovered
-                    covidData.World.active          = res.active
-                    covidData.World.critical        = res.critical
+                    covidData.World.cases              = res.cases
+                    covidData.World.todayCases         = res.todayCases
+                    covidData.World.deaths             = res.deaths
+                    covidData.World.todayDeaths        = res.todayDeaths
+                    covidData.World.recovered          = res.recovered
+                    covidData.World.todayRecovered     = res.todayRecovered
+                    covidData.World.active             = res.active
+                    covidData.World.critical           = res.critical
             })
             setTimeout(()=>{callback(covidData)}, 800);
             
