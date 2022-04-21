@@ -7,11 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <style>
+        th {
+            border: solid 5px rgb(235, 4, 4);
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        #jar{
+            border: solid 5px rgb(22, 10, 10);
+            margin-left: 30px;
+            margin-right: 30px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
     <center>
-        <table id="Jar">
+        <table id="jar">
             <tr>
                 <div class="bar">
                     <th>Category</th>
@@ -26,52 +40,44 @@
                 </div>
             </tr>
         </table>
-        <style>
-                th {
-                    border: solid 5px rgb(235, 4, 4);
-                    margin-left: 30px;
-                    margin-right: 30px;
-                }
-                #Jar{
-                    border: solid 5px rgb(22, 10, 10);
-                    margin-left: 30px;
-                    margin-right: 30px;
-                    text-align: center;
-                }
-        </style>
+
     </center>
     <script>
-            
-            function getUser(url1, url2, callback) {
-            const covidData = {"Thailand":{},"World":{}}
+        
+        function getUser(url1, url2, callback) {
+            const covidData = {"Thailand": {},"World": {}
+        }
             axios.get(`${url1}`).then(function (response) {
-                let res = response.covidData
-                    console.log(res)
-                    covidData.Thailand.cases           = res.cases
-                    covidData.Thailand.todayCases      = res.todayCases
-                    covidData.Thailand.deaths          = res.deaths
-                    covidData.Thailand.todayDeaths     = res.todayDeaths
-                    covidData.Thailand.recovered       = res.recovered
-                    covidData.Thailand.todayRecovered  = res.todayRecovered
-                    covidData.Thailand.active          = res.active
-                    covidData.Thailand.critical        = res.critical
+                let res = response.data
+                console.log(res)
+                covidData.Thailand.cases            = res.cases
+                covidData.Thailand.todayCases       = res.todayCases
+                covidData.Thailand.deaths           = res.deaths
+                covidData.Thailand.todayDeaths      = res.todayDeaths
+                covidData.Thailand.recovered        = res.recovered
+                covidData.Thailand.todayRecovered   = res.todayRecovered
+                covidData.Thailand.active           = res.active
+                covidData.Thailand.critical         = res.critical
             })
             axios.get(`${url2}`).then(function (response) {
-                let res = response.covidData
-                    covidData.World.cases              = res.cases
-                    covidData.World.todayCases         = res.todayCases
-                    covidData.World.deaths             = res.deaths
-                    covidData.World.todayDeaths        = res.todayDeaths
-                    covidData.World.recovered          = res.recovered
-                    covidData.World.todayRecovered     = res.todayRecovered
-                    covidData.World.active             = res.active
-                    covidData.World.critical           = res.critical
+                let res = response.data
+                covidData.World.cases               = res.cases
+                covidData.World.todayCases          = res.todayCases
+                covidData.World.deaths              = res.deaths
+                covidData.World.todayDeaths         = res.todayDeaths
+                covidData.World.recovered           = res.recovered
+                covidData.World.todayRecovered      = res.todayRecovered
+                covidData.World.active              = res.active
+                covidData.World.critical            = res.critical
             })
-            setTimeout(()=>{callback(covidData)}, 800);
+            setTimeout(() => {
+                callback(covidData)
+            }, 800);
             
+
         }
         function show(covidData) {
-            document.getElementById("Jar").innerHTML += `<tr><td>Thailand</td>
+            document.getElementById("jar").innerHTML += `<tr><td>Thailand</td>
             <td>${covidData.Thailand.cases}</td>
             <td>${covidData.Thailand.todayCases}</td>
             <td>${covidData.Thailand.deaths}</td>
@@ -81,7 +87,7 @@
             <td>${covidData.Thailand.active}</td>
             <td>${covidData.Thailand.critical}</td>
             </tr>`
-            document.getElementById("Jar").innerHTML += `<tr><td>World</td>
+            document.getElementById("jar").innerHTML += `<tr><td>World</td>
             <td>${covidData.World.cases}</td>
             <td>${covidData.World.todayCases}</td>
             <td>${covidData.World.deaths}</td>
