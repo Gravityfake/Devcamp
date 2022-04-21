@@ -11,7 +11,7 @@
 
 <body>
     <center>
-        <table id="con">
+        <table id="Jar">
             <tr>
                 <div class="bar">
                     <th>Category</th>
@@ -32,7 +32,7 @@
                     margin-left: 30px;
                     margin-right: 30px;
                 }
-                #con{
+                #Jar{
                     border: solid 5px rgb(22, 10, 10);
                     margin-left: 30px;
                     margin-right: 30px;
@@ -74,7 +74,7 @@
 
         }
         function show(covidData) {
-            document.getElementById("con").innerHTML += `<tr><td>Thailand</td>
+            document.getElementById("Jar").innerHTML += `<tr><td>Thailand</td>
             <td>${covidData.Thailand.cases}</td>
             <td>${covidData.Thailand.todayCases}</td>
             <td>${covidData.Thailand.deaths}</td>
@@ -84,7 +84,7 @@
             <td>${covidData.Thailand.active}</td>
             <td>${covidData.Thailand.critical}</td>
             </tr>`
-            document.getElementById("con").innerHTML += `<tr><td>World</td>
+            document.getElementById("Jar").innerHTML += `<tr><td>World</td>
             <td>${covidData.World.cases}</td>
             <td>${covidData.World.todayCases}</td>
             <td>${covidData.World.deaths}</td>
