@@ -57,21 +57,18 @@
                     covidData.Thailand.critical        = res.critical
             })
             axios.get(`${url2}`).then(function (response) {
-                let res = response.data
-                covidData.World.cases = res.cases
-                covidData.World.todayCases = res.todayCases
-                covidData.World.deaths = res.deaths
-                covidData.World.todayDeaths = res.todayDeaths
-                covidData.World.recovered = res.recovered
-                covidData.World.todayRecovered = res.todayRecovered
-                covidData.World.active = res.active
-                covidData.World.critical = res.critical
+                let res = response.covidData
+                    covidData.World.cases           = res.cases
+                    covidData.World.todayCases      = res.todayCases
+                    covidData.World.deaths          = res.deaths
+                    covidData.World.todayDeaths     = res.todayDeaths
+                    covidData.World.recovered       = res.recovered
+                    covidData.World.todayRecovered  = res.todayRecovered
+                    covidData.World.active          = res.active
+                    covidData.World.critical        = res.critical
             })
-            setTimeout(() => {
-                callback(covidData)
-            }, 2000);
+            setTimeout(()=>{callback(covidData)}, 800);
             
-
         }
         function show(covidData) {
             document.getElementById("Jar").innerHTML += `<tr><td>Thailand</td>
