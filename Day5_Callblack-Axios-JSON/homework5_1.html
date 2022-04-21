@@ -1,43 +1,43 @@
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
-      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-      <script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
 
-          function getUser(callback) {
-              axios.get("https://reqres.in/api/users?delay=3").then(function (response) {
-                  let res = response.data.data
-                 console.log(res)
-                  callback(res)
-             })
-          }
-         function show(res) {
-             for (let index = 0; index < res.length; index++) {
-                   document.getElementById("content").innerHTML += `<td>
-                     <h3 style="text-align: center;">${res[index].first_name}</h3>
-                      <p style="text-align: center;">${res[index].email}</p>
-                     <img src="${res[index].avatar}"style="margin-left: 20px;margin-right: 20px;">
-                      </td>`
-              }
-          }
-          getUser(show)
+        function getUser(callback) {
+            axios.get("https://reqres.in/api/users?delay=3").then(function (response) {
+                let res = response.data.data
+                console.log(res)
+                callback(res)
+            })
+        }
+        function show(res) {
+            for (let index = 0; index < res.length; index++) {
+                document.getElementById("content").innerHTML += `<td>
+                    <h3 style="text-align: center;">${res[index].first_name}</h3>
+                    <p style="text-align: center;">${res[index].email}</p>
+                    <img src="${res[index].avatar}"style="margin-right: 15px;margin-left: 15px;">
+                    </td>`
+            }
+        }
+        getUser(show)
 
-      </script>
+    </script>
   </head>
 
   <body>
-     <center>
+      <center>
+          <h1>Hello ReqRes users!</h1>
           <table>
-              <tr id="content">
-              </tr>
-              <h1>Hello ReqRes users!</h1>
-           </table>
-    </center>
-  </body>
+              <tr id="content"></tr>
 
-  </html>
+          </table>
+      </center>
+    </body>
+
+    </html>
