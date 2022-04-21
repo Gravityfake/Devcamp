@@ -45,16 +45,16 @@
             function getUser(url1, url2, callback) {
             const covidData = {"Thailand":{},"World":{}}
             axios.get(`${url1}`).then(function (response) {
-                let res = response.data
-                console.log(res)
-                covidData.Thailand.cases = res.cases
-                covidData.Thailand.todayCases = res.todayCases
-                covidData.Thailand.deaths = res.deaths
-                covidData.Thailand.todayDeaths = res.todayDeaths
-                covidData.Thailand.recovered = res.recovered
-                covidData.Thailand.todayRecovered = res.todayRecovered
-                covidData.Thailand.active = res.active
-                covidData.Thailand.critical = res.critical
+                let res = response.covidData
+                    console.log(res)
+                    covidData.Thailand.cases           = res.cases
+                    covidData.Thailand.todayCases      = res.todayCases
+                    covidData.Thailand.deaths          = res.deaths
+                    covidData.Thailand.todayDeaths     = res.todayDeaths
+                    covidData.Thailand.recovered       = res.recovered
+                    covidData.Thailand.todayRecovered  = res.todayRecovered
+                    covidData.Thailand.active          = res.active
+                    covidData.Thailand.critical        = res.critical
             })
             axios.get(`${url2}`).then(function (response) {
                 let res = response.data
