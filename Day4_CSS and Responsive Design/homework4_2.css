@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  a.hidden {
+    visibility: hidden;
+  }
+  
+  @media (min-width: 500px) {
+    a.hidden {
+      visibility: visible;
+    }
+  }
+  
+  @media (min-width: 768px) {
+
+    .row h1 {
+      font-size: 40px;
+    }
+    p.hidden {
+      visibility: hidden;
+    }
+  }
