@@ -34,18 +34,18 @@
         const arr = response.data;
         console.log(arr[1].friends);
         const result = arr
-          .filter((a) => a.gender == "male" && a.friends.length >= 2)
-          .map((b) => [
-            b.name,
-            b.gender,
-            b.company,
-            b.email,
-            b.friends,
+          .filter((q) => q.gender == "male" && q.friends.length >= 2)
+          .map((c) => [
+            c.name,
+            c.gender,
+            c.company,
+            c.email,
+            c.friends,
             "$" +
               (
                 parseFloat(
-                  b.balance
-                    .substring(1, b.balance[length - 1])
+                  c.balance
+                    .substring(1, c.balance[length - 1])
                     .replace(/,/g, "")
                 ) / 10
               ).toFixed(2),
