@@ -15,7 +15,7 @@
   </head>
   <body>
     <h1 class="text-center mb-4">Employee Table</h1>
-    <table class="table text-center">
+    <table class="table table-dark table-striped">
       <thead>
         <tr id="header" class="font-weight-bold">
           <td>Name</td>
@@ -26,7 +26,7 @@
           <td>Balance</td>
         </tr>
       </thead>
-      <tbody id="tableBody"></tbody>
+      <tbody id="bro"></tbody>
     </table>
 
     <script>
@@ -55,13 +55,13 @@
         console.log(result);
 
         for (let i = 0; i < result.length; i++) {
-          let tableBody = document.getElementById("tableBody");
-          let row = tableBody.appendChild(document.createElement("tr"));
+          let bro = document.getElementById("bro");
+          let row = bro.appendChild(document.createElement("tr"));
           for (let j = 0; j < result[i].length; j++) {
             let col = row.appendChild(document.createElement("td"));
             if (j === 4) {
               let friendList = result[i][j].map((x) => x.name);
-              console.log(friendList); // ออกมาเป็น array
+              console.log(friendList); 
               for (let k = 1; k <= result[i][j].length; k++) {
                 col.innerHTML += k + ". " + friendList[k - 1] + "<br />";
               }
