@@ -39,14 +39,14 @@ function App() {
       {todo.map((x) => (
         <>
           <TodoList bodyTodo={x.bodyTodo} dateTodo={x.dateTodo} />
-          <button style={{ marginLeft: "80px" }} onClick={() => deleteTodo(x)}>
+          <button style={{ marginLeft: "222px" }} onClick={() => deleteTodo(x)}>
             Delete
           </button>
         </>
       ))}
       <br />
       <input
-        style={{ marginLeft: "80px" }}
+        style={{ marginLeft: "100px" }}
         type="text"
         onKeyUp={enterComment}
       />
