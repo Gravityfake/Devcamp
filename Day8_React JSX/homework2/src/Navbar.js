@@ -8,9 +8,9 @@ const css = {
   flexWrap: "wrap",
 };
 
-const list = {
+const miss = {
   display: "inline",
-  paddingRight: "50px",
+  paddingRight: "35px",
 };
 
 const menu = {
@@ -20,27 +20,27 @@ const menu = {
 const Navbar = () => {
   return (
     <ul style={css}>
-      <li style={list}>
+      <li style={miss}>
         <a href="#">
           <img src={pic} style={{ height: "45px" }} alt="Logo" />
         </a>
       </li>
-      <li style={list}>
+      <li style={miss}>
         <a href="#" style={menu}>
           Create pikka
         </a>
       </li>
-      <li style={list}>
+      <li style={miss}>
         <a href="#" style={menu}>
           signup
         </a>
       </li>
-      <li style={list}>
+      <li style={miss}>
         <a href="#" style={menu}>
           signin
         </a>
       </li>
-      <li style={list}>
+      <li style={miss}>
         <a href="#" style={menu}>
           signout
         </a>
