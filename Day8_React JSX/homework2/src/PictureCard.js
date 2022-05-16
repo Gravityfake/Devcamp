@@ -10,8 +10,8 @@ const people = [
       parseInt(today.getMonth() + 1) +
       "-" +
       today.getFullYear(),
-    like: 1,
-    comment: 0,
+    like: 4,
+    comment: 8,
   },
   {
     img: "https://images.unsplash.com/photo-1621695371436-2118f66371a7",
@@ -97,7 +97,56 @@ const people = [
     like: 1,
     comment: 1,
   },
+  {
+    img: "https://images.unsplash.com/photo-1652615808419-f4e3e0f7519a",
+    name: "photo 009",
+    date:
+      today.getDate() +
+      "-" +
+      parseInt(today.getMonth() + 1) +
+      "-" +
+      today.getFullYear(),
+    like: 17,
+    comment: 12,
+  },
+  {
+    img: "https://images.unsplash.com/photo-1613952936212-7bd40f117443",
+    name: "photo 010",
+    date:
+      today.getDate() +
+      "-" +
+      parseInt(today.getMonth() + 1) +
+      "-" +
+      today.getFullYear(),
+    like: 6,
+    comment: 10,
+  },
+  {
+    img: "https://images.unsplash.com/photo-1652456480904-cc878416f41f",
+    name: "photo 011",
+    date:
+      today.getDate() +
+      "-" +
+      parseInt(today.getMonth() + 1) +
+      "-" +
+      today.getFullYear(),
+    like: 12,
+    comment: 10,
+  },
+  {
+    img: "https://images.unsplash.com/photo-1611548059011-36fdb04284ca",
+    name: "photo 012",
+    date:
+      today.getDate() +
+      "-" +
+      parseInt(today.getMonth() + 1) +
+      "-" +
+      today.getFullYear(),
+    like: 15,
+    comment: 10,
+  },
 ];
+
 
 const lap = {
     display: "inline-block",
