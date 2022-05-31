@@ -1,7 +1,7 @@
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import Home from "./Home";
 import Portfolio from "./Portfolio";
-import AboutUs from "./Aboutus";
+import Aboutus from "./Aboutus";
 import Contact from "./Contact";
 
 function App() {
