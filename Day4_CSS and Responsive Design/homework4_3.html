@@ -13,7 +13,7 @@
     <div class="header"><img src="https://uploads-ssl.webflow.com/603cf80d097ef5963487b651/60afd3b3999ec01cc934e3a8_Artboard%2052%20copy%204.png" class="img-thumbnail" width="20%" alt=""></div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
         <button
           class="navbar-toggler"
           type="button"
@@ -53,63 +53,6 @@
       </div>
     </nav>
 
-    <div
-      class="modal fade"
-      id="modal-member"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body m-auto">
-            <table class="table">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">First Name</th>
-                  <th scope="col">Last Name</th>
-                  <th scope="col">Nickname</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>อภิชาติ</td>
-                  <td>แซ่หลู่</td>
-                  <td>เอ๋</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>ปฏิพัทธ์</td>
-                  <td>ปัดป้อง</td>
-                  <td>พัตเตอร์</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>อนัส</td>
-                  <td>ศรีษาพุทธ</td>
-                  <td>เจน</td>
-                </tr>
-                <tr>
-                  <th scope="row">4</th>
-                  <td>ชญานิศ</td>
-                  <td>วงศ์สว่างศิริ</td>
-                  <td>หนิง</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>ปกรณ์พัฒน์</td>
-                  <td>อมรเลิศพานิช</td>
-                  <td>มิ้น</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-
     
     <div
       id="carouselExampleControls"
@@ -119,18 +62,24 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-          src="https://images.unsplash.com/photo-1584978885503-3eaf2b921df3" style="width:100%">
-         
+            src="https://picsum.photos/1500/350"
+            class="d-block w-100"
+            alt="..."
+          />
         </div>
         <div class="carousel-item">
           <img
-          src="https://images.unsplash.com/photo-1548491665-1923fcb18963" style="width:100%">
-          
+            src="https://picsum.photos/1600/350"
+            class="d-block w-100"
+            alt="..."
+          />
         </div>
         <div class="carousel-item">
           <img
-          src="https://images.unsplash.com/photo-1542464497-e217d476a9b2" style="width:100%">
-          
+            src="https://picsum.photos/1650/350"
+            class="d-block w-100"
+            alt="..."
+          />
         </div>
       </div>
       <button
@@ -153,7 +102,65 @@
       </button>
     </div>
 
-    
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modal-member"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body m-auto">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Nickname</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>ปกรณ์พัฒน์</td>
+                  <td>อมรเลิศพานิช</td>
+                  <td>มิ้น</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>อนิรุทธิ์</td>
+                  <td>โดดชัย</td>
+                  <td>คิว</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>จณิสตา</td>
+                  <td>สี่หิรัญวงศ์</td>
+                  <td>เมล</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>ศิลปการ</td>
+                  <td>สนิทโกศัย</td>
+                  <td>การ</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>อมรรัตน์</td>
+                  <td>ป้องกร</td>
+                  <td>นกยูง</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
     <div
       class="modal fade"
       id="modal-form"
@@ -163,6 +170,15 @@
     >
       <div class="modal-dialog">
         <div class="modal-content">
+          <!-- <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div> -->
           <div class="modal-body m-auto">
             <fieldset>
               <legend class="text-center">Register Form</legend>
@@ -212,7 +228,7 @@
               </div>
             </fieldset>
           </form></div>
-           <div class="modal-footer">
+          <!-- <div class="modal-footer">
             <button
               type="button"
               class="btn btn-secondary"
@@ -221,31 +237,45 @@
               Close
             </button>
             <button type="button" class="btn btn-primary">Save changes</button>
-          </div> 
+          </div> -->
         </div>
       </div>
     </div>
-     <div class="content d-flex bd-highlight justify-content-center align-items-center">
-    <h1> Music Making Software</h1>
-    </div> 
+    <!-- <div class="content d-flex bd-highlight justify-content-center align-items-center">
+    <h1>Content</h1>
+    </div> -->
     <div class="container mt-3">
       <div class="row">
         <div class="col-md-6 pb-3">
           <p class="p-3 text-black-50">
-            Make music
-            Create with or without an instrument.
-            Start making professional‑sounding music right away. Plug in your guitar or mic and choose from a jaw‑dropping array of realistic amps and effects. 
-            You can even create astonishingly human‑sounding drum tracks and become inspired by thousands of loops from popular genres like EDM, Hip Hop, Indie, and more.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Placeat nisi cum culpa cupiditate hic omnis id excepturi
+            possimus aliquid ipsum ea, consequuntur non ullam? Rem ex ipsam
+            iusto dolorum qui! Officiis ex officia exercitationem,
+            perferendis eaque mollitia minus distinctio soluta nesciunt
+            excepturi ut voluptates sequi rem illum, a doloribus cumque
+            dolor animi nisi similique labore ipsa neque cupiditate.
+            Perferendis, nisi? Eveniet temporibus unde neque rerum non
+            necessitatibus. Minima, velit, voluptates adipisci laborum
+            beatae culpa consectetur quidem, iure incidunt alias excepturi
+            repudiandae odit id magnam delectus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eos soluta porro similique dolorem facilis, voluptatibus ipsam debitis reiciendis accusamus repellat eaque consectetur? Est similique velit, suscipit ipsa ut alias.
           </p>
         </div>
         <div class="col-md-6">
           <div class="row">
             <div>
               <p class="p-3 text-black-50">
-                Learn to play Welcome to the school of rock. And blues. And classical.
-                Get started with a great collection of built‑in lessons for piano and guitar. 
-                Or learn some Multi‑Platinum hits from the actual artists who recorded them. 
-                You can even get instant feedback on your playing to help hone your skills.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Placeat nisi cum culpa cupiditate hic omnis id excepturi
+                possimus aliquid ipsum ea, consequuntur non ullam? Rem ex ipsam
+                iusto dolorum qui! Officiis ex officia exercitationem,
+                perferendis eaque mollitia minus distinctio soluta nesciunt
+                excepturi ut voluptates sequi rem illum, a doloribus cumque
+                dolor animi nisi similique labore ipsa neque cupiditate.
+                Perferendis, nisi? Eveniet temporibus unde neque rerum non
+                necessitatibus. Minima, velit, voluptates adipisci laborum
+                beatae culpa consectetur quidem, iure incidunt alias excepturi
+                repudiandae odit id magnam delectus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique dicta eaque blanditiis accusantium libero, nemo aliquid nam saepe maiores velit. Delectus dignissimos voluptatum quidem assumenda est amet nobis odio expedita.
               </p>
             </div>
           </div>
@@ -253,6 +283,12 @@
       </div>
     </div>
   </div>
-  <div class="footer d-flex bg-dark align-items-center"><div>copyright © 2022</div></div>
+    <div class="footer d-flex bg-dark justify-content-center align-items-center"><div>All rights reserved by DevCampThailand.com</div></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
