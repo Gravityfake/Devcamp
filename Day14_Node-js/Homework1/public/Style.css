@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    text-align: center;
+  }
+  
+  /* Add a black background color to the top navigation */
+  .topnav {
+    background-color: rgb(9, 167, 9);
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #e6a2a2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: rgb(248, 170, 170);
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #fa3939;
+    color: rgb(252, 212, 212);
+  }
+  
+  img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
+  
+  p {
+    font-size: 20px;
+    width: 50%;
+    text-align: left;
+    margin: auto;
+  }
+  
+  div.a {
+    text-indent: 50px;
+  }
+  
+  li {
+    font-size: 20px;
+    text-align: left;
+  }
+  
+  .list {
+    width: 50%;
+    margin: auto;
+  }
+  
+  .contact {
+    text-align: left;
+  }
