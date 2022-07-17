@@ -1,0 +1,21 @@
+การบ้าน #2 database ร้านหนังสือ
+
+1. พนักงานคนที่ 5 ลาออก ลบข้อมูลคนที่ 5 ออก
+ - DELETE FROM employee WHERE id = 5
+
+2. เจ้าของร้านอยากเก็บที่อยู่พนักงานเพิ่ม ใส่ที่อยู่ให้พนักงานแต่ละคน คนไหนไม่รู้ให้เป็น NULL
+- ALTER TABLE `employee` ADD `address` VARCHAR(255) NULL AFTER `created_at`;
+ 	UPDATE `employee` SET `address` = 'Krabi' WHERE `employee`.`id` = 1;
+	UPDATE `employee` SET `address` = 'Chiang Mai' WHERE `employee`.`id` = 3;
+
+3. หาจำนวนพนักงานทั้งหมดในร้าน
+- SELECT COUNT(*) FROM employee	
+
+4. แสดงรายชื่อพนักงานที่อายุน้อยกว่า 20 ปี
+- SELECT firstname from employee WHERE age < 20
+
+5. แสดงรายชื่อพนักงานทั้งหมดโดยให้แสดงแค่ field ชื่อจริง และ อายุ
+- SELECT firstname, age from employee
+
+6. แก้ไขชื่อจริงของพนักงานที่ชื่อ Noah ให้เป็น Neil
+- UPDATE `employee` SET `firstname` = 'Neil' WHERE `employee`.`id` = 1;
