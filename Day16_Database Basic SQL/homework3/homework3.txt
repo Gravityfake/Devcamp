@@ -26,4 +26,4 @@
 - SELECT DISTINCT isbn FROM salebook;
 
 6. หาว่าขายหนังสือได้เงินทั้งหมดเท่าไร
-- SELECT SUM(price * items) as Result FROM salebook; 29713
+- SELECT SUM(price * items) as Result FROM salebook;
