@@ -1,105 +1,105 @@
-import "antd/dist/antd.css";
-import { Routes, Route, Outlet, Link } from "react-router-dom";
-import Employee from "./Employee";
-import EmployeeDetail from "./EmployeeDetail";
-import Department from "./Department";
-import EmployeeList from "./data";
+import "./App.css";
+import { useState, useRef, useEffect } from "react";
 
 function App() {
-  return <Routing />;
-}
+  let firstname = useRef();
+  let lastname = useRef();
+  let gender = useRef();
 
-function Routing() {
-  return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="employee" element={<Employee />} />
-        <Route
-          //path="employee/:id/:firstname/:lastname/:position/:department"
-          path="employee-detail"
-          element={<EmployeeDetail />}
-        />
-        <Route path="department" element={<Department />} />
-        <Route path="employee/:department" element={<Employee />} />
-        <Route path="*" element={<NotMatch />} />
-      </Route>
-    </Routes>
-  );
-}
+  const [maleList, setMaleList] = useState([]);
+  const [femaleList, setFemaleList] = useState([]);
+  const [NAList, setNAList] = useState([]);
 
-function Layout() {
-  return (
-    <ContainerComp>
-      <HeaderComp></HeaderComp>
-      <MenuComp></MenuComp>
-      <ContentComp></ContentComp>
-      <FooterComp></FooterComp>
-    </ContainerComp>
-  );
-}
+  const submitForm = () => {
+    if (gender.current.value === "male") {
+      // setMaleList(`${firstname.current.value} ${lastname.current.value}`);
+      // let tempMaleList = [...maleList];
+      // console.log(tempMaleList);
+      // tempMaleList.push(`${firstname.current.value} ${lastname.current.value}`);
+      // setMaleList(tempMaleList);
+      setMaleList([
+        ...maleList,
+        {
+          firstname: firstname.current.value,
+          lastname: lastname.current.value,
+        },
+      ]);
+    } else if (gender.current.value === "female") {
+      setFemaleList([
+        ...femaleList,
+        {
+          firstname: firstname.current.value,
+          lastname: lastname.current.value,
+        },
+      ]);
+    } else if (gender.current.value === "na") {
+      setNAList([
+        ...NAList,
+        {
+          firstname: firstname.current.value,
+          lastname: lastname.current.value,
+        },
+      ]);
+    }
+  };
 
-function ContainerComp(props) {
-  return props.children;
-}
+  // useEffect(() => {
+  //   console.log(maleList.length);
+  // }, [maleList, femaleList, NAList]);
 
-function HeaderComp() {
-  return (
-    <>
-      <h1>Header</h1>
-      <hr />
-    </>
-  );
-}
-
-function MenuComp() {
   return (
     <>
-      <h1>Menu</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/employee">Employee List</Link>
-          </li>
-          <li>
-            <Link to="/department">Department List</Link>
-          </li>
-        </ul>
-      </nav>
+      <input type="text" ref={firstname} />
+      <input type="text" ref={lastname} />
+      <select ref={gender}>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="na">NA</option>
+      </select>
+      <input type="button" value="submit" onClick={submitForm} />
+
       <hr />
+      <h2>Male List</h2>
+      {maleList &&
+        maleList.map((x) => {
+          return (
+            <ul>
+              <li>
+                {x.firstname} {x.lastname}
+              </li>
+            </ul>
+          );
+        })}
+      {/* <p>{JSON.stringify(maleList)}</p> */}
+      <p>Total: {maleList.length}</p>
+      <h2>Female List</h2>
+      {femaleList &&
+        femaleList.map((x) => {
+          return (
+            <ul>
+              <li>
+                {x.firstname} {x.lastname}
+              </li>
+            </ul>
+          );
+        })}
+      {/* <p>{JSON.stringify(femaleList)}</p> */}
+      <p>Total: {femaleList.length}</p>
+      <h2>NA List</h2>
+      {NAList &&
+        NAList.map((x) => {
+          return (
+            <ul>
+              <li>
+                {x.firstname} {x.lastname}
+              </li>
+            </ul>
+          );
+        })}
+      {/* <p>{JSON.stringify(NAList)}</p> */}
+      <p>Total: {NAList.length}</p>
     </>
   );
-}
-
-function ContentComp() {
-  return (
-    <>
-      <Outlet />
-      <hr />
-    </>
-  );
-}
-
-function FooterComp() {
-  return (
-    <div style={{ marginLeft: "20px" }}>
-      <h1>Contact</h1>
-      <p>Tell:0844567789</p>
-      <p>E-mail:shop@gmail.com</p>
-    </div>
-
-  );
-}
-
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function NotMatch() {
-  return <h2>Not Match</h2>;
 }
 
 export default App;
