@@ -1,13 +1,14 @@
-import { createStore} from 'redux'
-import { configureStore } from '@reduxjs/toolkit'
-import calculateReducer from './calculateReducer'
+// import { createStore} from 'redux'
+import { configureStore } from "@reduxjs/toolkit";
+import profileReducer from "./Reducers/profileReducer";
+import productReducer from "./Reducers/productReducer";
 
 const store = configureStore({
-    reducer: {
-        counter: calculateReducer,
-        profile: calculateReducer
+    reducer : {
+        profile : profileReducer,
+        product : productReducer
+
     }
 })
 
-export default store
-
+export default store;
