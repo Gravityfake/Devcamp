@@ -1,21 +1,34 @@
-import { useSelector, useDispatch } from 'react-redux'
-import { increment, decrement, setDefault } from './calculateReducer'
+import React from 'react';
+import "./App.css"
+import 'antd/dist/antd.css';
+import { Layout } from 'antd';
+import Navbar from './Components/Navbar';
+import Profile from './Components/Profile'
+import Cart from './Components/Cart'
+import ProductList from './Components/ProductList'
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+const { Footer } = Layout;
 
-function App() {
-  // Get ค่า State
-  const count = useSelector(state => state.counter)
-  // ใช้เรียก Actions
-  const dispatch = useDispatch()
+const App = () => (
+  <Layout>
+    <Router>
 
-  return (
-    <><h1>{count.salary}</h1>
-      <input type='button' value="Increase Salary" onClick={() => dispatch(increment())} />
-      <input type='button' value="Decreate Salary" onClick={() => dispatch(decrement())} />
-      <input type='button' value="Default Salary" onClick={() => dispatch(setDefault())} />
-    </>
-  );
-}
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Profile />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/productlist" element={<ProductList />}></Route>
+      </Routes>
+    </Router>
+    <Footer
+      style={{
+        textAlign: 'center',
+      }}
+    >
+      Create By MicroMew !
+    </Footer>
+  </Layout>
+);
 
 export default App;
-
-
