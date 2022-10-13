@@ -4,9 +4,9 @@ export const profileReducer = createSlice({
     name: "Profile",
     // Name State 
     initialState: {
-        firstname: "Stephen",
-        lastname: "Strange",
-        age: 45
+        firstname: "Charlotte",
+        lastname: "Brayden",
+        age: 28
     },
     // Action in Reducer
     reducers: {
